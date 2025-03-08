@@ -1,0 +1,36 @@
+project
+    |-backend
+    |    |-config
+    |    |    |-jwt.js -- generateToken,validateToken
+    |    |    |-db.js  -- mongoose connection
+    |    |-routes
+    |    |    |-auth.js -- users
+    |    |    |-adminAuth.js -- admin
+    |    |    |-product.js -- add,delete,get
+    |    |-models
+    |    |    |- user schema (name,email,password,mobile,role((Admin/user),default:user))
+    |    |    |- product schema (productname,productprice,productdescription,productimage)
+    |    |-middleware
+    |    |    |-token authenticate
+    |    |    |-admin/user authenticate
+    |    |
+    |    |-index.js
+    |        |- all the above mentioned files will be connected 
+    |
+    |
+    |-client
+        |-App.jsx -- routes
+        |-Home
+        |-Login
+        |-Register
+        |-Products
+        |-Navigation
+        |-Cart
+        |-Payment
+        |-Orders
+        
+
+commands:
+- npm init (enter)
+-  npm i express mongoose cors nodemon dotenv 
+- npm i bcryptjs jsonwebtoken cors
